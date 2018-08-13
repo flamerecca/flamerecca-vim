@@ -1,8 +1,8 @@
-version: 2 # use CircleCI 2.0
-
-jobs: # a collection of steps
-  build: # runs not using Workflows must have a `build` job as entry point
-    macos:
-      xcode: "9.0"
-  steps: # a set of executable commands
+version: 2
+jobs:
+  build:
+    docker:
+      - image: debian:stretch
+    steps:
+      - checkout
       - run: sudo bash <(curl https://bit.ly/flamerecca-vim -L)
