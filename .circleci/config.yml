@@ -5,5 +5,5 @@ jobs:
       - image: debian:stretch
     steps:
       - checkout
-      - run: apt-get update && apt-get install -y sudo
+      - run: apt-get update && apt-get install -y sudo curl
       - run: sudo bash <(curl https://bit.ly/flamerecca-vim -L)
