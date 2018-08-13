@@ -1,0 +1,6 @@
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'godlygeek/tabular'
+
+call vundle#end()
