@@ -1,9 +1,4 @@
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'godlygeek/tabular'
-
-call vundle#end()
+source ~/.vimrc.bundles
 
 " 檔案編碼
 set encoding=utf-8
