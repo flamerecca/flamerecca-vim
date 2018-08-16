@@ -17,6 +17,26 @@ error() {
     exit 1
 }
 
+install_vim_plug() {
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	res="$?"
+	success "installed vim-plug"
+}
+
+sync_repo() {
+	repo_path="$HOME/.$app_name"
+	if [ ! -e "$repo_path" ]; then
+		git clone https://github.com/flamerecca/flamerecca-vim.git $repo_path
+		res="$?"
+		success "clone flamerecca-vim success."
+	else
+		cd $repo_path && git pull origin master
+		res="$?"
+		success "update flamerecca-vim success."
+	fi
+}
+
 home_variable_check() {
     if [ -z "$HOME" ]; then
         error "You must have your HOME environmental variable set to continue."
@@ -66,3 +86,5 @@ home_variable_check
 check_program_exist "vim"
 
 check_program_exist "git"
+
+install_vim_plug
