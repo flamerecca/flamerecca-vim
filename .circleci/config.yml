@@ -7,5 +7,5 @@ jobs:
       - checkout
       - run: apt-get update && apt-get install -y sudo curl git vim ncurses-term xterm
       - run: export TERM=xterm
-      - run: sudo -E su -c 'echo $TERM'
-      - run: sudo -E su -c 'bash <(curl https://bit.ly/flamerecca-vim -L)'
+      - run: sudo -E bash -c 'echo $TERM'
+      - run: sudo -E bash -c 'bash <(curl https://bit.ly/flamerecca-vim -L)'
