@@ -54,7 +54,8 @@ setup_plugin() {
 
     vim \
         "+PluginInstall" \
-        "+qall"
+        "+qall" \
+	"-T term"
 
     export SHELL="$system_shell"
 
@@ -97,7 +98,7 @@ backup() {
         backup_path=$HOME/.backup-vim
         mkdir -p $backup_path
         mv $HOME/.vimrc $backup_path
-        res="$?"
+        ret="$?"
         success "~/.vimrc already backup to ${backup_path}."
     fi
     return 0
@@ -111,6 +112,9 @@ home_variable_check
 # 檢查必要程式是否安裝
 check_program_exist "vim"
 check_program_exist "git"
+
+#備份
+backup
 
 # 安裝 vim plug
 install_vim_plug
