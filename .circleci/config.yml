@@ -5,5 +5,5 @@ jobs:
       - image: debian:8-slim
     steps:
       - checkout
-      - run: apt-get update && apt-get install -y sudo curl git vim ncurses-term
+      - run: apt-get update && apt-get install -y sudo curl git vim ncurses-term xterm
       - run: sudo su -c 'bash <(curl https://bit.ly/flamerecca-vim -L)'
