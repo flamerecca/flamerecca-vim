@@ -52,7 +52,7 @@ setup_plugin() {
     local system_shell="$SHELL"
     export SHELL='/bin/sh'
     
-    vim \
+    vim -u $HOME/.vimrc.bundles \
         "+PluginInstall" \
         "+qall"
 
