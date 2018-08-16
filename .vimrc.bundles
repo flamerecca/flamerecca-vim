@@ -1,6 +1,14 @@
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"第一行必須設置這個才會正常生效
+set nocompatible
 
-Plugin 'godlygeek/tabular'
+" 設置 vundle {
+    filetype off
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
+" }
 
+" 設置套件 {
+    Plugin 'flazz/vim-colorschemes'
+    Plugin 'godlygeek/tabular'
+" }
 call vundle#end()
