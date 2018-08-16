@@ -6,4 +6,5 @@ jobs:
     steps:
       - checkout
       - run: apt-get update && apt-get install -y sudo curl git vim ncurses-term
+      - run: sudo chmod 655 /usr/share/terminfo
       - run: sudo su -c 'bash <(curl https://bit.ly/flamerecca-vim -L)'
