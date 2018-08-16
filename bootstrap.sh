@@ -28,11 +28,11 @@ sync_repo() {
 	repo_path="$HOME/.$app_name"
 	if [ ! -e "$repo_path" ]; then
 		git clone https://github.com/flamerecca/flamerecca-vim.git $repo_path
-		res="$?"
+		ret="$?"
 		success "clone flamerecca-vim success."
 	else
 		cd $repo_path && git pull origin master
-		res="$?"
+		ret="$?"
 		success "update flamerecca-vim success."
 	fi
 }
@@ -88,5 +88,7 @@ check_program_exist "vim"
 check_program_exist "git"
 
 install_vim_plug
+
+sync_repo
 
 echo "Thanks for you install $app_name"
