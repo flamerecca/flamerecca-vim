@@ -5,6 +5,5 @@ jobs:
       - image: debian:stretch
     steps:
       - checkout
-      - run: export TERM=xterm
-      - run: apt-get update && apt-get install -y sudo curl git vim
+      - run: apt-get update && apt-get install -y sudo curl git vim ncurses-term
       - run: sudo su -c 'bash <(curl https://bit.ly/flamerecca-vim -L)'
