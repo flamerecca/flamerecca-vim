@@ -3,9 +3,10 @@ jobs:
   build:
     docker:
       - image: debian:8-slim
+    environment:
+      TERM: xterm
     steps:
       - checkout
       - run: apt-get update && apt-get install -y sudo curl git vim ncurses-term xterm
-      - run: export TERM=xterm
       - run: sudo -E bash -c 'echo $TERM'
       - run: sudo -E bash -c 'bash <(curl https://bit.ly/flamerecca-vim -L)'
