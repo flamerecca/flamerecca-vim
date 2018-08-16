@@ -5,7 +5,7 @@ set encoding=utf-8
 set fileencodings=utf-8,cp950
 
 syntax on        " 語法上色顯示
-colorscheme default
+colorscheme dracula
 set t_Co=256 
 
 " 編輯喜好設定                                                                                                                                                                                                    
