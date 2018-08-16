@@ -88,3 +88,5 @@ check_program_exist "vim"
 check_program_exist "git"
 
 install_vim_plug
+
+echo "Thanks for you install $app_name"
