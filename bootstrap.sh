@@ -53,7 +53,6 @@ setup_plugin() {
     export SHELL='/bin/sh'
 
     vim \
-        "-T xterm" \
         "+PluginInstall" \
         "+qall"
 
