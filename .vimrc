@@ -16,6 +16,7 @@ set tabstop=4    " tab 的字元數
 set softtabstop=4
 set expandtab   " 用 space 代替 tab
 
+let g:airline_theme='term'
 
 set ruler        " 顯示右下角設定值
 set backspace=2  " 在 insert 也可用 backspace
