@@ -14,5 +14,6 @@ set nocompatible
     Plugin 'terryma/vim-multiple-cursors'     "多游標
     Plugin 'vim-airline/vim-airline'          "下方指示列套件
     Plugin 'vim-airline/vim-airline-themes'   "下方指示列外觀設置
+    Plugin 'mbbill/undotree'                  "undo 歷史樹
 " }
 call vundle#end()
