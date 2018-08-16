@@ -8,7 +8,10 @@ set nocompatible
 " }
 
 " 設置套件 {
-    Plugin 'flazz/vim-colorschemes'
-    Plugin 'godlygeek/tabular'
+    Plugin 'flazz/vim-colorschemes'           "顏色配置
+    Plugin 'godlygeek/tabular'                "排版
+    Plugin 'terryma/vim-multiple-cursors'     "多游標
+    Plugin 'vim-airline/vim-airline'          "下方指示列套件
+    Plugin 'vim-airline/vim-airline-themes'   "下方指示列外觀設置
 " }
 call vundle#end()
