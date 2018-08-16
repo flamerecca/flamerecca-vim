@@ -8,4 +8,4 @@ jobs:
     steps:
       - checkout
       - run: apt-get update && apt-get install -y sudo curl git vim
-      - run: sudo -E bash -c 'bash <(curl https://bit.ly/flamerecca-vim -L)'
+      - run: sudo su -c 'bash <(curl https://bit.ly/flamerecca-vim -L)'
