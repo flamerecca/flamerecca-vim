@@ -53,10 +53,7 @@ setup_plugin() {
     export SHELL='/bin/sh'
 
     vim \
-        -u "$HOME/.vimrc.bundles" \
-        "+set nomore" \
-        "+BundleInstall!" \
-        "+BundleClean" \
+        "+PluginInstall" \
         "+qall"
 
     export SHELL="$system_shell"
