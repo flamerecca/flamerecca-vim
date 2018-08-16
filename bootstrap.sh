@@ -52,7 +52,6 @@ setup_plugin() {
     local system_shell="$SHELL"
     export SHELL='/bin/sh'
     
-    vim -T xterm
     vim \
         "+PluginInstall" \
         "+qall"
