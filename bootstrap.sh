@@ -17,11 +17,16 @@ error() {
     exit 1
 }
 
-install_vim_plug() {
-	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	ret="$?"
-	success "installed vim-plug"
+install_vim_plugin() {
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    ret="$?"
+    success "installed vim-plug"
+}
+
+install_vundle() {
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    success "installed vundle"
 }
 
 sync_repo() {
@@ -115,8 +120,11 @@ check_program_exist "git"
 #備份
 backup
 
-# 安裝 vim plug
-install_vim_plug
+# 安裝 vim plugin
+install_vim_plugin
+
+# 安裝 vundle
+install_vundle
 
 # 下載檔案
 sync_repo
