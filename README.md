@@ -7,3 +7,7 @@
 # 安裝
 
 `bash <(curl https://bit.ly/flamerecca-vim -L)`
+
+如果你使用 fish shell，不能使用括弧處理指令，可以分成兩段執行：
+
+`curl https://bit.ly/flamerecca-vim -L > bootstrap.sh; sh bootstrap.sh`
