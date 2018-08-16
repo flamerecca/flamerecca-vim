@@ -37,6 +37,26 @@ sync_repo() {
 	fi
 }
 
+create_symlinks() {
+	repo_path="$HOME/.$app_name"
+	ln -sf "$repo_path/.vimrc"         "$HOME/.vimrc"
+	ln -sf "$repo_path/.vimrc.bundles" "$HOME/.vimrc.bundles"
+	touch "$HOME/.vimrc.local"
+	touch "$HOME/.vimrc.bundles.local"
+	mkdir -p $HOME/.vim/undodir
+	ret="$?"
+	success "setting up vim symlinks."
+}
+
+setup_plugin() {
+	vim -u $HOME/.vimrc.bundles \
+		"+PlugInstall" \
+		"+PlugClean" \
+		"+qall"
+	ret="$?"
+	success "installed plugins"
+}
+
 home_variable_check() {
     if [ -z "$HOME" ]; then
         error "You must have your HOME environmental variable set to continue."
@@ -81,14 +101,23 @@ backup() {
 
 ################# main()
 
+# 檢查是否設置 $HOME參數
 home_variable_check
 
+# 檢查必要程式是否安裝
 check_program_exist "vim"
-
 check_program_exist "git"
 
+# 安裝 vim plug
 install_vim_plug
 
+# 下載檔案
 sync_repo
+
+# 建立相對路徑
+create_symlinks
+
+# 安裝 plugin
+setup_plugin
 
 echo "Thanks for you install $app_name"
