@@ -49,12 +49,19 @@ create_symlinks() {
 }
 
 setup_plugin() {
-	vim -u $HOME/.vimrc.bundles \
-		"+PlugInstall" \
-		"+PlugClean" \
-		"+qall"
-	ret="$?"
-	success "installed plugins"
+    local system_shell="$SHELL"
+    export SHELL='/bin/sh'
+
+    vim \
+        -u "$HOME/.vimrc.bundles" \
+        "+set nomore" \
+        "+BundleInstall!" \
+        "+BundleClean" \
+        "+qall"
+
+    export SHELL="$system_shell"
+
+    success "Now updating/installing plugins using Vundle"
 }
 
 home_variable_check() {
