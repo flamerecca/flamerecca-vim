@@ -17,4 +17,15 @@ set nocompatible
     Plugin 'mbbill/undotree'                  "undo 歷史樹
     Plugin 'nathanaelkane/vim-indent-guides'  "排版標記
 " }
+
+" autocomplete {
+    Plugin 'honza/vim-snippets'               " vim-snippets
+    Plugin 'scrooloose/nerdcommenter'         " 快速處理註解
+" }
+
+" PHP {
+    Plugin 'sniphpets/sniphpets'              " php snippets
+    Plugin 'arnaud-lb/vim-php-namespace'      " php namespace
+" }
+
 call vundle#end()
