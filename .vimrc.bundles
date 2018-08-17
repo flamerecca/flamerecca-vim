@@ -28,4 +28,8 @@ set nocompatible
     Plugin 'arnaud-lb/vim-php-namespace'      " php namespace
 " }
 
+" markdown {
+    Plugin 'tpope/vim-markdown'               " markdown
+" }
+
 call vundle#end()
