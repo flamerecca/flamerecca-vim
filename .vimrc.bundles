@@ -9,7 +9,7 @@ set nocompatible
 
 " 設置套件 {
     Plugin 'VundleVim/Vundle.vim'             "預設必須
-    Plugin 'flazz/vim-colorschemes'           "顏色配置
+    Bundle 'spf13/vim-colors'.                "顏色配置
     Plugin 'godlygeek/tabular'                "排版
     Plugin 'terryma/vim-multiple-cursors'     "多游標
     Plugin 'vim-airline/vim-airline'          "下方指示列套件
