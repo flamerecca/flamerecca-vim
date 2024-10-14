@@ -1,4 +1,4 @@
-# flamerecca-vim
+# recca-vim
 
 [![CircleCI](https://circleci.com/gh/flamerecca/flamerecca-vim.svg?style=shield)](https://circleci.com/gh/flamerecca/flamerecca-vim)
 
